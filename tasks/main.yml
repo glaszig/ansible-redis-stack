@@ -1,0 +1,18 @@
+---
+# tasks file for roles/redis-stack
+
+- name: Add repository
+  ansible.builtin.yum_repository:
+    name: Redis
+    description: Redis
+    baseurl: "{{ redis_stack_server_repo_url }}"
+    gpgcheck: yes
+    gpgkey: "{{ redis_stack_server_repo_key }}"
+
+- name: install redis stack
+  package:
+    name: "{{ redis_stack_server_packages }}"
+    state: present
+
+- name: enable and run service
+  service: name=redis-stack-server enabled=yes state=started

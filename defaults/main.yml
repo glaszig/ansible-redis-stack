@@ -1,0 +1,7 @@
+---
+# defaults file for roles/redis-stack
+redis_stack_server_repo_url: http://packages.redis.io/rpm/rhel7
+redis_stack_server_repo_key: https://packages.redis.io/gpg
+redis_stack_server_packages:
+  - redis-stack-server
+  - compat-openssl10

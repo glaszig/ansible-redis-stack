@@ -1,0 +1,8 @@
+galaxy_info:
+  author: glaszig
+  description: Install Redis Stack server from official package server
+  license: MIT
+  min_ansible_version: 2.1
+  platforms:
+    - name: Rocky
+      versions: all
